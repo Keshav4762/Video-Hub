@@ -22,7 +22,7 @@ function Home() {
   return (
     <Box  >
       <MyCarousel />
-      <Container maxW={'container.xl'} minH={'100vh'} p={16}>
+      <Container maxW={'container.xl'} minH={['70vh','100vh']} p={16}>
         
         <Heading
           textTransform={'uppercase'}
