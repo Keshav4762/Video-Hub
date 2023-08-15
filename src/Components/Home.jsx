@@ -15,14 +15,14 @@ const headingOptions = {
   transform: 'translate(-50%, -50%)',
   textTransform: 'uppercase',
   p: '4',
-  size: '4xl',
+  // size: '2xl',
 };
 
 function Home() {
   return (
     <Box  >
       <MyCarousel />
-      <Container maxW={'container.xl'} minH={['70vh','100vh']} p={16}>
+      <Container maxW={'container.xl'} minH={'100vh'} p={16}>
         
         <Heading
           textTransform={'uppercase'}
@@ -44,35 +44,39 @@ function Home() {
 }
 
 const MyCarousel = () => (
-  <Carousel autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false}>
-    <Box w={'full'} h={'100vh'}>
-      <Image src={img1} />
-      <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
-        Watch The Future
-      </Heading>
-    </Box>
+  <div style={{}} >
 
-    <Box w={'full'} h={'100vh'}>
+  <Carousel style={{height:'20'}} autoPlay infiniteLoop interval={2000} showStatus={false} showThumbs={false}>
+
+    <Box w={'full'} h={['50vh','100vh']}>
       <Image src={img2} />
       <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
         Future is Gaming
       </Heading>
     </Box>
 
-    <Box w={'full'} h={'100vh'}>
+    <Box w={'full'} h={['50vh','100vh']}>
+      <Image src={img1} />
+      <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
+        Watch The Future
+      </Heading>
+    </Box>
+    
+    <Box w={'full'} h={['50vh','100vh']}>
       <Image src={img3} />
       <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
         Gaming in console
       </Heading>
     </Box>
 
-    <Box w={'full'} h={'100vh'}>
+    <Box w={'full'} h={['50vh','100vh']}>
       <Image src={img4} />
       <Heading bgColor={'whiteAlpha.600'} color={'black'} {...headingOptions}>
         Night Life in Meta
       </Heading>
     </Box>
   </Carousel>
+  </div>
 );
 
 export default Home;
